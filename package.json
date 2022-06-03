@@ -1,0 +1,42 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SMART CONTRACTS",
+  "scripts": {
+    "clean": "rimraf ./build/ && mkdirp ./build/",
+    "precompile": "npm run clean",
+    "compile": "truffle compile",
+    "predeploy": "npm run compile",
+    "deploy": "truffle migrations --network",
+    "test": "truffle test",
+    "verify": "truffle run verify --network",
+    "ganache": "node ./scripts/ganache-cli.js",
+    "concat": "waffle flatten"
+  },
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.0",
+    "ethereum-waffle": "^3.4.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.5.1",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ganache-cli": "^6.12.2",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "truffle": "^5.4.17",
+    "truffle-plugin-verify": "^0.5.16"
+  },
+  "contributors": [
+    {
+      "name": "Aleksandr Ivannikov",
+      "email": "dev@an-ivannikov.com",
+      "url": "https://an-ivannikov.com"
+    }
+  ]
+}
